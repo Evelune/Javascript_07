@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit and DELETE</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(name,arr){
+        let element = document.createElement('li') 
+        element.innerHTML = name[Math.floor(Math.random() * name.length)]
+        element.style.color = arr[Math.floor(Math.random() * arr.length)]
+        let li = document.querySelector('.language')
+        li.appendChild(element)
+        // document.body.appendChild(li)
+    }
+
+
+    function addLanguageOptimized(text){
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(text))
+        document.querySelector('.langugae').appendChild(li)
+    }
+
+    let arr = ["red","blue","yellow","green","pink","white"]
+    let lan = ["java","python","rubby","Html","Css","Js"]
+    addLanguage(lan,arr)
+    addLanguageOptimized("Jarvis")
+   
+    
+
+
+
+</script>
+</html>
