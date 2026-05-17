@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Event Delegation</h1>
+    <div>
+      <div id="ul">
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Graphs</li>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelector("#ul").addEventListener("click", (e) => {
+      console.log(e.target);
+      console.log(e.target.id);
+      console.log(e.target.tagName);
+      
+    });
+  </script>
+</html>
