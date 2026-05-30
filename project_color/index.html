@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1: Color Switcher</title>
+    <style>
+      *{
+        background-color: black inherit;
+        color: white;
+      }
+
+      body{
+        background-color: black;
+      }
+
+      .parent {
+        margin-top: 20vh;
+        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 68px;
+        gap: 64px;
+        height: fit-content;
+      }
+      .h1 {
+        font-size: 48px;
+      }
+
+      .box-parent {
+        height: auto;
+        gap: 24px;
+        display: flex;
+      }
+      .box-child {
+        height: 100px;
+        width: 100px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #blue {
+        background-color: blue;
+      }
+
+      #pink {
+        background-color: pink;
+      }
+      #yellow {
+        background-color: rgb(255, 255, 0);
+        color: black;
+      }
+      #green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="h1">Color Scheme Switcher</div>
+      <div class="box-parent">
+        <div id="blue" class="box-child">Blue</div>
+        <div id="green" class="box-child">Green</div>
+        <div id="yellow" class="box-child">Yellow</div>
+        <div id="pink" class="box-child">Pink</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelectorAll(".box-child");
+    const body = document.body;
+
+    parent.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        const color = e.target.id;
+        console.log(color);
+        body.style.backgroundColor = color;
+      });
+    });
+  </script>
+</html>

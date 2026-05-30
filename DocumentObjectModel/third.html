@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+    function addElement(langName){
+        const element = document.createElement('li')
+        element.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(element)
+    }
+
+    addElement("Python")
+    addElement("DSA")
+    addElement("System Design")
+    addElement("Backend")
+
+    //Edit
+    const value = document.querySelector("li:nth-child(2)")
+    console.log(value);
+    const ele = document.createElement('li')
+    ele.innerText = 'Python'
+    value.replaceWith(ele)
+
+    // Remove
+    const e = document.querySelector('li:last-child')
+    e.remove()
+    
+</script>
+</html>
