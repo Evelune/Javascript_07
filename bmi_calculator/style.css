@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.content{
+    width: 600px;
+    height: fit-content;
+    padding: 24px;
+    gap: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.bmiInformation{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+label{
+    font-size: 18px;
+}
+
+#height{
+    border: 1.5px solid black;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#weight{
+    border: 1.5px solid black;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+button{
+    width: 100%;
+    border: none;
+    padding: 8px 12px 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: skyblue;
+}
+
+
+.result{
+    display: flex;
+    height: 80px;
+}
+
+#output{
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}

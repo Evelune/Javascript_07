@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 48px;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .form label {
+        margin-top: 48px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      #guess {
+        height: 44px;
+        width: 100%;
+        padding: 8px 16px 8px 16px;
+      }
+
+      #submit {
+        padding: 8px 16px 8px 16px;
+        background-color: black;
+        color: white;
+        border: none;
+        width: 80%;
+        margin-bottom: 24px;
+        appearance: none;
+      }
+
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .display {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .gr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loworHig{
+        height: 40px;
+      }
+
+      .previousGuess{
+        /* padding: 4px 6px 4px 6px; */
+        border-radius: 2px;
+        background-color: rgb(226, 226, 226);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Guess the Number</h1>
+        <p>Try to guess the Number between 1 to 100</p>
+        <p>You have 10 chance to guess the number</p>
+      </div>
+      <div class="form">
+        <label for="guess">Guess the Number</label>
+        <input type="number" id="guess" placeholder="enter guess" />
+        <button id="submit">Submit Guess</button>
+      </div>
+      <div class="display">
+        <p>
+          Previous Guess
+          <span class="previousGuess "></span>
+        </p>
+        <div class="gr">
+          <label for="guessRemaining">Guess Remaining : </label>
+          <div id="guessRemaining">10</div>
+        </div>
+        <p class="loworHig"></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
